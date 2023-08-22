@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programming Shikhbo Tailwind</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <h1 class="">Hello</h1>
-</body>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body class="bg-[#2b2d33]">
+   
+    <nav class="shadow-md">
+      <div class="container mx-auto items-center py-5 px-5">
+        <div class="flex justify-between">
+          <div>
+            <a href="" class="text-white text-xl sm:text-3xl font-bold"
+              ><span class="text-[#f65023]">S</span>mart Cod<span
+                class="text-[#f65023]"
+                >ers</span
+              ></a
+            >
+          </div>
+
+          <div class="md:hidden">
+            <span onclick="openNav()" class="text-xl text-orange-600"><i class="fa-solid fa-bars"></i></span>
+          </div>
+
+          <ul class="md:flex space-x-5 text-xl text-white hidden ">
+            <li><a href="" class="text-[#f65023]">Home</a></li>
+            <li><a href="" class="hover:text-[#f65023]">Products</a></li>
+            <li><a href="" class="hover:text-[#f65023]">Portfolio</a></li>
+            <li><a href="" class="hover:text-[#f65023]">Blog</a></li>
+            <li><a href="" class="hover:text-[#f65023]">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="my-nav" class="overlay h-screen fixed z-10 top-0 left-0 bg-gray-600 transition-[0.5s] w-0 overflow-x-hidden">
+        <span class="absolute text-4xl top-5 right-11 text-orange-500" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></span>
+        <div class="overlay-content relative top-[25%] w-screen text-center ">
+            <ul class="flex flex-col">
+                <li><a href="" class="p-2 text-3xl inline-block transition-[0.3s] text-orange-500">Home</a></li>
+                <li><a href="" class="p-2 text-3xl inline-block transition-[0.3s] hover:text-orange-500">Products</a></li>
+                <li><a href="" class="p-2 text-3xl inline-block  transition-[0.3s] hover:text-orange-500">Blogs</a></li>
+                <li><a href="" class="p-2 text-3xl inline-block  transition-[0.3s] hover:text-orange-500">Portfolio</a></li>
+                <li><a href="" class="p-2 text-3xl inline-block  transition-[0.3s] hover:text-orange-500">Contact</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+<script>
+  function openNav(){
+    document.getElementById("my-nav").style.width = '100%'
+  }
+  function closeNav(){
+    document.getElementById("my-nav").style.width = '0'
+  }
+</script>
+
+  </body>
 </html>
